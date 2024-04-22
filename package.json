@@ -1,0 +1,27 @@
+{
+  "name": "ac-flow",
+  "version": "1.0.0",
+  "description": "Build your applications just by specifying the flow",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lagoeiro/ac-flow.git"
+  },
+  "keywords": [
+    "Flowchart",
+    "flow",
+    "json"
+  ],
+  "author": "Alessandro Carlos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lagoeiro/ac-flow/issues"
+  },
+  "homepage": "https://github.com/lagoeiro/ac-flow#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

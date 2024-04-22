@@ -1,0 +1,36 @@
+{
+    "name": "Test Operation",
+    "resources":[
+        {   "name": "mysql-main",
+            "type": "database",
+            "dbms": "mysql",
+            "host": "localhost",
+            "database": "netjobtech_db",
+            "port": 3306,
+            "user": "netjobtech_usr",
+            "passw":"Ar3p@Op3ra#",
+            "connectionLimit": 20
+        }
+    ]
+
+    ,
+    "flow":[
+        {
+            "name":"first-node",
+            "connection": "mysql-main",
+            "query": "`SELECT ID, CAST(AES_DECRYPT(NAME,'@key') AS CHAR) AS NAME, CAST(AES_DECRYPT(EMAIL,'@key') AS CHAR) AS EMAIL, ROLE FROM netjobtech_db.USER",
+            "data":{
+                "key": "M@nkeyD.lUffy"
+            },
+            "mappimg":{
+                "ID":"id",
+                "NAME": "name",
+                "EMAIL": "email",
+                "RULE": "rule"
+
+            }
+        }
+    ]
+
+   
+}
